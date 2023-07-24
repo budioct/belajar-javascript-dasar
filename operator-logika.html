@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operator Logika</title>
+</head>
+<body>
+
+<script>
+    const nilaiUjian = 80;
+    const nilaiAbsensi = 80;
+
+    const lulusUjian = nilaiUjian > 70;
+    const lulusAbsensi = nilaiAbsensi > 75;
+
+    const lulus = lulusUjian && lulusAbsensi;
+    document.writeln("Anda Di nyatakan = " + lulus)
+    document.writeln("<br>")
+
+    // versi ringkasnya
+    document.writeln(nilaiUjian > 70 && nilaiAbsensi > 75);
+
+</script>
+
+
+</body>
+</html>

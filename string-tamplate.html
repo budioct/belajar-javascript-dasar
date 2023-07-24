@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String Tamplate</title>
+</head>
+<body>
+<script>
+
+    /**
+     * String Template
+     * String Template, dimana kita bisa mensubtitusi data dari luar String ke dalam String,
+     * seperti mengambil data variable, atau bahkan melakukan operasi matematika.
+     * Untuk menggunakan String Template, cara pembuatan String nya harus menggunakan ` (backtick), bukan ‘ (petik satu) atau “ (petik dua)
+     */
+
+    const name = "budhi octaviansyah";
+    const template = `name : ${name}`; // string template, akan subtitusi
+    console.info(template)
+
+    let firstName = "budhi";
+    let lastName = "octaviansyah";
+    const fullName = `full name: ${firstName} ${lastName}`;
+    console.info(fullName)
+
+    // expression tamplate
+    let newName = "Sekar Rahmawati";
+    const value = 80;
+    const status = `full name: ${newName}, Lulus: ${value > 75}`;
+    console.info(status)
+
+    // multi string. bisa multi line
+    let multiLineString = `
+    nama saya adalah budhi octaviansyah
+    Hello World
+    wkwkkwkwwk
+    Test Broo
+    `;
+    document.writeln("<pre>")
+    document.writeln(multiLineString)
+    document.writeln("</pre>")
+
+
+</script>
+</body>
+</html>
