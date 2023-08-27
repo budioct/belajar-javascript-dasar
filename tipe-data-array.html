@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipe Data Array</title>
+</head>
+<body>
+<script>
+
+    /**
+     * Tipe data array []
+     * Tipe data object {}
+     *
+     * // operasi di array []
+     *  array.push(...value)    Menambah data ke Array
+     *  array.length            Untuk mendapatkan panjang Array
+     *  array[index]            Mendapat data di posisi index
+     *  array[index] = value    Mengubah data di posisi index
+     *  delete array[index]     Menghapus data di posisi index, namun index tidak bergeser
+     */
+
+    let arrayKosong = [];
+
+    let namaOrang = ["budhi", "octaviansyah", "22"];
+
+    // push() // untuk menambah data
+    namaOrang.push("mamat");
+    namaOrang.push("saripudin");
+    namaOrang.push("anak", "om", "mamat")
+
+    console.table(namaOrang); // kita bisa lihat di console browser akan bentuk table
+
+    document.writeln(`panjang array= ${namaOrang.length}`);
+    document.writeln("<br>")
+    document.writeln(`get data= ${namaOrang[0]}`);
+    document.writeln("<br>")
+    document.writeln(`edit data. sebelumnya "${namaOrang[7]}" ubah data menjadi= ${namaOrang[7] = "memet"}`);
+    console.table(namaOrang)
+
+    delete namaOrang[2];
+    console.table(namaOrang) // datanya cuman di hapus saja tetapi indexnya tidak di hapus akan tetap ada
+
+    namaOrang[2] = "22 lagi";
+    console.table(namaOrang)
+
+</script>
+</body>
+</html>

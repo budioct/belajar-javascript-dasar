@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+<script>
+
+    /**
+     * Tipe data object {}
+     * arrayAssosiative tidak di dukung oleh javascript. jadi jika kita ingin membuat object key:value..
+     * jika key nya kita masukan string makan akan otomatis di konversi ke type object {}
+     */
+
+    const orang = {
+        "nama" : "budhi octaviansyah",
+        "hobi" : "sepak bole",
+        "suka" : "makan"
+    }; // set object langsung
+
+    // akses object{}
+    console.log(`Nama : ${orang["nama"]}`); // akses berdasarkan matcher key
+    console.log(`Hobi : ${orang.hobi}`); // akses berdasarkan key yang di set
+    console.log(`Suka : ${orang.suka}`);
+
+    // tambah dan ubah // set satu persatu
+    // orang["nama"] = "budhi octaviansyah";
+    // orang["hobi"] = "sepak bole";
+    // orang["suka"] = "makan";
+
+    console.table(orang);
+
+    // hapus
+    delete orang["suka"];
+
+    console.table(orang);
+
+</script>
+</body>
+</html>

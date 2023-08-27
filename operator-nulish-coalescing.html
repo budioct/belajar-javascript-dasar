@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operator Nullish Coalescing</title>
+</head>
+<body>
+<script>
+
+    // nullish coalescing
+    // ekpresi let variable = variable ?? "alert null / undefined"
+
+    // tanpa nullish
+    let parameter = null;
+    let data = parameter;
+    if (data === undefined || data === null) {
+        data = "Nilai Default";
+    }
+    document.writeln(`${data}`);
+    document.writeln("<br>");
+
+    // dengan nullish (mirip ternary operator)
+    let value = parameter ?? "Nilai Default";
+    document.writeln(`${value}`);
+    document.writeln("<br>");
+
+
+</script>
+</body>
+</html>
