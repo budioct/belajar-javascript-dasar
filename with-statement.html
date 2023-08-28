@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>With Statement</title>
+</head>
+<body>
+<script>
+
+  /**
+   * With Statement untuk mengakses object {}
+   *
+   * // sudah tidak di rekomendasikan!!.. karena ambigu dalam penulisan
+   */
+
+  const person = {
+    "firstname" : "budhi",
+    "lastname" : "octaviansyah"
+  };
+
+  // akses tanpa with statement
+  console.log(person.firstname);
+  console.log(person.lastname);
+
+  // akses dengan with statement
+  with (person) {
+    console.log(firstname);
+    console.log(lastname);
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Return Value</title>
+</head>
+<body>
+<script>
+
+    function sayHello(firstName, lastName) {
+        const say = `Hello Bro, ${firstName} ${lastName}`;
+
+        return say;
+    }
+
+    function getFinalScore(value) {
+        switch (value) {
+            case 90 :
+                return "A";
+                break;
+            case 80 :
+                return "B";
+                break;
+            case 70 :
+                return "C";
+                break;
+            case 60 :
+                return "D";
+                break;
+            default:
+                "E";
+        }
+    }
+
+    const result = sayHello("budhi", "oct");
+    document.writeln(`<p>${result}</p>`)
+
+    const value = getFinalScore(90);
+    document.writeln(`<p>your grade: ${value}</p>`)
+
+</script>
+</body>
+</html>

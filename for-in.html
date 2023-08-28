@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For In</title>
+</head>
+<body>
+<script>
+
+  /**
+   * For In untuk iterasi foreach Object  nameObject{key:value}
+   * // mengakses value namaobject[for in variable]
+   */
+
+  // object / array assosiative / map
+  const person = {
+    "firstname" : "budhi",
+    "lastname" : "octaviansyah"
+  };
+
+  // for in
+  for (const data in person) {
+    document.writeln(`<p>get: key ${data} : value ${person[data]}</p>`); // mendapat key
+  }
+
+  // array
+  const names = ["budhi", "octaviansyah"];
+
+  for (const index in names) {
+    document.writeln(`<p>get: index ${index} : value ${names[index]}</p>`); // mendapat key
+  }
+
+</script>
+</body>
+</html>

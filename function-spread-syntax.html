@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Spread Syntax</title>
+</head>
+<body>
+<script>
+
+  /**
+   *  jika kita terlanjur menggunakan data array kita bisa masukan ke parameter rest parameter
+   */
+  function sum(name, ...data) {
+    let total = 0;
+    for (const item of data) {
+      total += item;
+    }
+    console.info(`Total ${name} is ${total}`);
+  }
+
+  sum("orange", ...[2, 5, 7, 3, 2, 4, 8]); // otomatis array akan bisa di baca oleh rest parameter cukup tambahkan ...sebelum []array
+  sum("melon", ...[2, 1, 7, 8, 2, 4, 3]);
+  sum("water melon", ...[2, 9, 7, 5, 2, 4, 1]);
+
+</script>
+</body>
+</html>

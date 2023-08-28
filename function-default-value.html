@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Default Value</title>
+</head>
+<body>
+<script>
+
+  /**
+   * karena kita sudah tahu kalau parameter di function jika kita tidak set akan return undefined
+   * maka dari itu kita bisa beri default value jika parameternya tidak di set
+   */
+
+  function register(name, gender = "UnKnown"){
+    console.info(name);
+    console.info(gender);
+  }
+
+  register("budhi", "pria");
+  register("budhi"); // param gender tidak di set
+
+</script>
+</body>
+</html>
