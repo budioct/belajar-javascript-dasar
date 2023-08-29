@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Masalah Variable Var</title>
+</head>
+<body>
+<script>
+
+  /**
+   * jika kita menggunakan key let dalam membuat variable itu lebih terpredisksi dalam kasus scope
+   *
+   * kalau menggunakan key var dalam membuat variable itu seperti override ulang variable di dalam hal lainya
+   * ini inkonsisten dalam scope value
+   *
+   * lebih di rekomendasikan menggunakan key let, const dalam membuat variable
+   */
+
+  let i = 20;
+
+  for (let i = 1; i <= 10; i++) {
+    // local scope
+    console.info(`local scope ${i}`);
+  }
+
+  console.info(`global scope ${i}`);
+
+
+</script>
+</body>
+</html>

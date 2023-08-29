@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Destructuring</title>
+</head>
+<body>
+<script>
+
+    /**
+     * Destructuring
+     * Destructuring adalah fitur yang bisa digunakan untuk membongkar value-value di array[] atau object{} ke dalam variable-variable
+     * Fitur ini sangat mempermudah kita ketika ingin mengambil data dari array atau object tanpa harus melakukan pengambilan data satu persatu
+     */
+
+    {
+        // array
+        const names = ["budhi", "oct", "22", "mamat", "jamal"]; // index 3 dan 4 akan di simpan di array[]
+        let [firstname, middlename, lastname, ...others] = names; // Destructuring // akses di ganti dengan key yang di buat dalam array
+
+        // console.info(names[0]); // akses array yang Umum
+        console.info(firstname); // akses array Destructuring
+        console.info(middlename);
+        console.info(lastname);
+        console.info(others);
+    }
+
+    {
+        // object
+        const person = {
+            firstname: "budhi",
+            lastname: "oct",
+            address: {
+                street: "jalan manju mundur",
+                city: "tangerang",
+                country: "indonesia"
+            },
+            hobby: "code",
+            fancy: "movie"
+        };
+
+        // let {firstname, lastname, address, ...others} = person; // Destructuring
+        // console.info(firstname);
+        // console.info(lastname);
+        // console.info(address);
+        // console.info(others);
+
+        // let {firstname, lastname, hobby, fancy} = person; // Destructuring
+        // let {street, city, country} = person.address;
+        // console.info(firstname);
+        // console.info(lastname);
+        // console.info(street);
+        // console.info(city);
+        // console.info(country);
+        // console.info(hobby);
+        // console.info(fancy);
+
+        // Destructuring nested
+        let {firstname, lastname, address: {city, street, country}, ...others} = person; // Destructuring
+        console.info(firstname);
+        console.info(lastname);
+        console.info(street);
+        console.info(city);
+        console.info(country);
+        console.info(others);
+
+    }
+
+
+</script>
+</body>
+</html>

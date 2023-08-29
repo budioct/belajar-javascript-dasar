@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Method</title>
+</head>
+<body>
+<script>
+
+    // object method  method dalam object
+
+    // function sayHello(name) {
+    //     alert(`Hello ${name}`);
+    // }
+
+    // cara 1
+    // const person = {
+    //     name: "budhi",
+    //     // sayHello: sayHello
+    //     sayHello: function (name) {
+    //         alert(`Hello ${name}`);
+    //     }
+    // }
+
+    // cara 2
+    const person = {
+        name : "budhi"
+    }
+
+    person.sayHello = function (name) {
+            alert(`Hello ${name}`);
+    }
+
+    person.sayHello("budhi");
+
+</script>
+</body>
+</html>

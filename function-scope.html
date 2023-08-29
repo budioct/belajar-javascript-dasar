@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Scope</title>
+</head>
+<body>
+<script>
+
+    /**
+     * berkaitan dengan scope (area akses sebuah data)
+     * scope global scope dan local scope
+     *
+     * note: local scope di dalam method nested
+     *       variable paling global bisa di akses scope local
+     *       variable paling local tidak bisa di akses scope global
+     */
+
+    // global scope
+    let counter = 0;
+
+    function hitMe() {
+        // local scope hitMe()
+        counter++;
+    }
+
+    function other() {
+        // local scope other
+    }
+
+    // akses function
+    hitMe();
+    hitMe();
+    console.info(counter);
+
+
+    // local scope
+    function first(){
+        // local scope first()
+        let  firstVariable = "first";
+
+        function firstNested(){
+            console.info(firstVariable); // bisa mengakses variable di atasnya
+            let firstNestedVariable = "first Nested";
+        }
+
+        firstNested();
+        // console.log(firstNestedVariable); // Error // tidak bisa akses variable yang di dalam method firstNested()
+
+    }
+
+    function second(){
+        let secondVariable = "second";
+    }
+
+    first();
+    second();
+
+    // console.info(firstVariable); // Error // tidak bisa akses variable yang di dalam function first()
+    // console.info(secondVariable);
+
+
+
+</script>
+</body>
+</html>

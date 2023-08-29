@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow Function di Object</title>
+</head>
+<body>
+<script>
+
+  /**
+   * // mengakses function di dalam object {}
+   * dengan function biasa vs function arrow. dengan key this
+   */
+
+  const person = {
+    name : "budhi",
+    sayHello : function (name)  {
+      // function umum
+      console.info(this); // return object
+      console.info(`Hello ${name}, My name is ${this.name}`);
+    },
+    sayHello2 : (name) => {
+      // function arrow
+      console.info(this); // jika akses this maka result // Window (scope global)
+      console.info(`Hello ${name}, My name is ${this.name}`);
+    }
+
+  }
+
+  person.sayHello("nawan");
+  person.sayHello2("jimmy");
+
+</script>
+</body>
+</html>

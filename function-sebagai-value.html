@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Sebagai Value</title>
+</head>
+<body>
+<script>
+
+  /**
+   * Function Sebagai Value
+   * Function tidak hanya bisa digunakan sebagai kode program yang dieksekusi, tapi bisa juga sebagai value
+   * Artinya, function bisa disimpan di variable, bisa juga dikirim melalui parameter ke function lainnya
+   */
+
+  function sayHello(name){
+    document.writeln(`<p>Hello ${name}</p>`);
+  }
+  // akses method
+  sayHello("budhi");
+
+  // convert method to variable
+  const say = sayHello;
+  // akses method as value
+  say("mamat");
+
+
+  // function sebagai parameter
+  function giveMeName(callback){
+    callback("Test"); // sayHello("Test");
+  }
+
+  // access method sebagai parameter
+  giveMeName(sayHello); // set method sebagai parameter
+  giveMeName(say("abang"));
+
+
+
+</script>
+</body>
+</html>

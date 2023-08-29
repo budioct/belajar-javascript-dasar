@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Anonymouse</title>
+</head>
+<body>
+<script>
+
+  // funtion tanpa nama
+
+  // untuk membuat anonymouse funtion harus di assaigment dengan variable
+  const say = function (name){
+    document.writeln(`<p>Hello ${name}</p>`)
+  }
+  say("budhi"); // Hello budhi
+  say("mamat");
+
+  function giveMeName(callback){
+    callback("test");
+  }
+  giveMeName(say); // Hello test
+
+  // anonymouse function sebagai parameter
+  // kekuranganya tidak bisa di reuseable
+  // digunakan untuk mengirim function2 yang sederhana kita bisa gunakan anonymouse function ke dalam parameter
+  giveMeName(function (name){
+    document.writeln(`<p>Hi ${name}</p>`)
+  }); // Hi test
+
+
+</script>
+</body>
+</html>

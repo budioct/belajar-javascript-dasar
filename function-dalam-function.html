@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function dalam Function</title>
+</head>
+<body>
+<script>
+
+    /**
+     * function dalam function
+     * berkaitan dengan scope (area akses sebuah data)
+     * scope global scope dan local scope
+     */
+
+    // global scope
+    function outer() {
+        // local scope funtion outer()
+
+        function inner() {
+            // local scope funtion inner()
+            console.info("Inner");
+        }
+
+        // akses method
+        inner();
+        inner();
+
+    }
+
+    outer();
+    // inner(); // Error // tidak bisa di akses di luar scope function outer()
+
+</script>
+</body>
+</html>

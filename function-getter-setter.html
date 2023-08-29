@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Getter Setter</title>
+</head>
+<body>
+<script>
+
+  /**
+   * enkapsulapsi variable, object, dll. dengan method
+   * Dengan menggunakan Getter dan Setter, kita bisa melakukan hal apapun dalam function sebelum
+   * sebuah property di akses atau diubah, misal menambah validasi dan lain-lain
+   */
+
+  const person = {
+    firstname : "budhi",
+    lastname : "oct",
+    get fullName() {
+      // getter
+      return `${this.firstname} ${this.lastname}`;
+    },
+    set fullName(value){
+      // setter
+      const  array = value.split(" ");
+      this.firstname = array[0];
+      this.lastname = array[1];
+    }
+  }
+
+  // getter
+  console.info(person.firstname);
+  console.info(person.lastname);
+  console.info(person.fullName);
+
+  // setter
+  person.fullName = "mamat sobari";
+  console.info(person.firstname);
+  console.info(person.lastname);
+
+
+
+
+</script>
+</body>
+</html>
